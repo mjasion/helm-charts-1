@@ -1456,6 +1456,8 @@ kubelet:
 kubeControllerManager:
   enabled: true
 
+  namespace: kube-system
+
   ## If your kube controller manager is not deployed as a pod, specify IPs it can be found on
   ##
   endpoints: []

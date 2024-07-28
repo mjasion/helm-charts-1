@@ -27,7 +27,7 @@ spec:
     {{- end }}
   namespaceSelector:
     matchNames:
-      - "kube-system"
+      -  {{ .Values.kubeControllerManager.namespace }}
   endpoints:
   - port: {{ .Values.kubeControllerManager.serviceMonitor.port }}
     {{- if .Values.kubeControllerManager.serviceMonitor.interval }}
