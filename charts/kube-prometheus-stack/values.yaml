@@ -1940,6 +1940,8 @@ kubeScheduler:
 kubeProxy:
   enabled: true
 
+  namespace: kube-system
+
   ## If your kube proxy is not deployed as a pod, specify IPs it can be found on
   ##
   endpoints: []

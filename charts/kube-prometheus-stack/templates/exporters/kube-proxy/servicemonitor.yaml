@@ -4,7 +4,7 @@ kind: ServiceMonitor
 metadata:
   name: {{ template "kube-prometheus-stack.fullname" . }}-kube-proxy
   {{- if .Values.prometheus.prometheusSpec.ignoreNamespaceSelectors }}
-  namespace: kube-system
+  namespace: {{ .Values.kubeProxy.namespace }}
   {{- else }}
   namespace: {{ template "kube-prometheus-stack.namespace" . }}
   {{- end }}
